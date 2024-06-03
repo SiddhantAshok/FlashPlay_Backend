@@ -1,0 +1,15 @@
+/.vscode
+/mode_module
+./dist
+
+
+*.env
+.env
+.env*
+
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all HTML files:
+**/*.html
