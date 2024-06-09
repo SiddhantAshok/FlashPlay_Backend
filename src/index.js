@@ -1,12 +1,13 @@
 // require('dotenv').config({path:'./env'});
 import dotenv from 'dotenv';
 import connectDB from "./db/indexDB.js";
+import { app } from './app.js';
 
 dotenv.config({path: './env'});
 
 connectDB().then(() => {
 
-  app.on('error', () => {
+    app.on('error', () => {
     console.log('ERROR', error);
     throw error;
    });
@@ -17,7 +18,7 @@ connectDB().then(() => {
   }
 ).catch((error) => {
   console.log('MONGODB connection failed !!! ',error);
-});;
+});
 
 /*
 import express from 'express'
